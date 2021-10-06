@@ -21,24 +21,111 @@
 						## スピノカップの振り返り！
 						ニッシー☆
 						---
-						このスライドは[revealjs](https://revealjs.com)で作りました。
+						このスライドは[revealjs](https://revealjs.com)で作られました。
 						---
 						# 自己紹介します。
 						---
 						# ニッシー☆です。
-						福岡生まれ、福岡育ち。
 						---
-						# Hack'z.Incでインターンしています！
+						# SNSのIDは
+						# `@yukinissie`です。
 						---
-						# スピノカップで私がやったことを紹介します。
+						# 福岡生まれ、
+						# 福岡育ち。
 						---
-						# 4つやりました。
+						# 虹色電球
+						# 赤背景のアイコンの中の人です。
+						---
+						# `Hack'z.Inc`の
+						# インターン生です！
+						---
+						# スピノカップの
+						# 反省点を
+						# 紹介します。
+						---
+						# ３つあります。
 						---
 						# （１）
 						---
-						<div class="r-fit-text">以上！</div>
+						# `Node`プロジェクトが`npm`か`yarn`のどちらを使っているかを事前に共有しなかった。
+						---
+						# →チームメンバーの環境構築にて無駄な時間を使わせてしまった。
+						---
+						「yarnしてもでぜんぜん動かないし、エラー吐くのですがそれは、、」
+						---
+						「それ、npmで管理してます。。」
+						---
+						>>小一時間とんだ！！😇😇
+						---
+						# `Node`での開発では`npm`か`yarn`のどちらを使っているかを事前に共有しましょう。
+						---
+						# （２）
+						---
+						# 開発にhttps通信が必要であることを伝えてなかった。
+						---
+						# →環境構築にまたも時間を使わせてしまった。
+						---
+						# HTTPS通信はブラウザのURL窓に「🔒」マークがついているときの通信
+						---
+						？？？「なんだろう、Webカメラ起動しないの<br>やめてもらっていいですか？」
+						---
+						「あ、それHTTPS通信での開発が必要です。。」
+						---
+						# HTTPS通信じゃないとブラウザからカメラが起動できません。
+						---
+						こんな感じのエラーが出ます。。<br>
+						```
+						On Error Event Error: getUserMedia is not implemented in this browser
+							at Object.eval [as getUserMedia] (webpack-internal:///./node_modules/vue-web-cam/dist/index.js:1)
+							at VueComponent.testMediaAccess (webpack-internal:///./node_modules/vue-web-cam/dist/index.js:1)
+							at VueComponent.setupMedia (webpack-internal:///./node_modules/vue-web-cam/dist/index.js:1)
+							at VueComponent.mounted (webpack-internal:///./node_modules/vue-web-cam/dist/index.js:1)
+							at invokeWithErrorHandling (webpack-internal:///./node_modules/vue/dist/vue.common.dev.js:1868)
+							at callHook (webpack-internal:///./node_modules/vue/dist/vue.common.dev.js:4232)
+							at Object.insert (webpack-internal:///./node_modules/vue/dist/vue.common.dev.js:3161)
+							at invokeInsertHook (webpack-internal:///./node_modules/vue/dist/vue.common.dev.js:6381)
+							at VueComponent.patch [as __patch__] (webpack-internal:///./node_modules/vue/dist/vue.common.dev.js:6598)
+							at VueComponent.Vue._update (webpack-internal:///./node_modules/vue/dist/vue.common.dev.js:3960)
+						```
+						---
+						>getUserMediaがブラウザに定義されていません
+						---
+						HTTPS通信のような安全な通信でなければnavigator.mediaDevicesプロパティが定義されずgetUserMedia()にアクセスできないそうです。<br>
+						(マニアック)
+						---
+						詳細は[getUserMedia](https://developer.mozilla.org/ja/docs/Web/API/MediaDevices/getUserMedia)の<br>
+						"`Encryption based security`"にて
+						---
+						# 仕方ないので
+						---
+						# オレオレ証明書を埋め込んで回避しましたが、、
+						---
+						# [`ngrok`](https://ngrok.com/)を使うことをオススメします。
+						---
+						# `ngrok`を使うと簡単にHTTPS通信でローカルサーバーにアクセスできるようになります。
+						---
+						ngrokをインストールして以下のコマンドを打つとlocalhostの8080ポートに対するhttpとhttpsのURLが発行されて外部からアクセスできるようになります。
+						```
+						ngrok http 8080
+						```
+						---
+						# `ngrok`の詳しい紹介はまたの機会に。。
+						---
+						# 開発にhttps通信が必要であればそのための開発手法をまとめ、共有しておきましょう。
+						---
+						# （３）
+						---
+						# メンターさんを積極的に頼った。
+						---
+						# 大正解でした！！
+						---
+						## メンターさんを頼ったことにより適切なクラウドサービスを選ぶことができ、開発をスムーズに行えました。
+						---
+						<div class="r-fit-text">以上です！</div>
 						---
 						### ご清聴ありがとうございました！
+						---
+						このスライドは[ハックツハッカソン大反省会LT](https://hackz.connpass.com/event/226334/)用に作られました。
 					</textarea>
 				</section>
 			</div>
